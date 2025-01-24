@@ -148,10 +148,10 @@ Advanced options of Consumer
 npm install @khasmir/node-red-kafkajs
 ```
 
-## Screenshots
+<!-- ## Screenshots
 
 ![kafkajs-client](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-client.PNG)
 
 ![kafkajs-consumer](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-consumer.PNG)
 
-![kafkajs-producer](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-producer.PNG)
+![kafkajs-producer](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-producer.PNG) -->
