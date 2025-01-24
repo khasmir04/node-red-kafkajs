@@ -145,7 +145,7 @@ Advanced options of Consumer
 ## Installation
 
 ```code
-npm install node-red-contrib-kafkajs
+npm install @khasmir/node-red-kafkajs
 ```
 
 ## Screenshots
