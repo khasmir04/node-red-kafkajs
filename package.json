@@ -8,6 +8,13 @@
     "email": "kcaluscusao@gmail.com"
   },
   "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/khasmir04/node-red-kafkajs.git"
+  },
+  "publishConfig": {
+    "@khasmir:registry": "https://npm.pkg.github.com"
+  },
   "node-red": {
     "nodes": {
       "kafka-consumer": "./src/kafka-consumer.js",
