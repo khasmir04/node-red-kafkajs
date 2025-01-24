@@ -1,0 +1,157 @@
+# node-red-kafkajs
+
+This node can be used in order to produce and consume messages to Kafka. It is highly dependent on 'kafkajs' library. Consists of two nodes.
+
+This node is a fork of <https://github.com/emrebekar/node-red-contrib-kafkajs> which is an advanced alternative to <https://github.com/emrebekar/node-red-contrib-kafka-client>. Credit goes to the owner of the above repos.
+
+- kafka-producer
+- kafka-consumer
+
+Further details can be found in following pages:
+
+- Client Configuration: <https://kafka.js.org/docs/configuration>
+- Consuming Messages: <https://kafka.js.org/docs/consuming>
+- Producing Messages: <https://kafka.js.org/docs/producing>
+
+## What's new?
+
+- Producer has now output ports for success and failure.
+- Consumer has an option to use snappy compression.
+- Node credentials are removed, manually add it in config.
+
+## Input Parameters
+
+### kafkajs-client
+
+#### Name (Optional)
+
+Name wanted to be shown in Node
+
+#### Brokers
+
+Brokers comma delimited (Multiple host is provided)
+
+#### Client ID
+
+ID of client to be connected to Kafka Cluster
+
+#### Request Timeout
+
+Request timeout of Kafka Client
+
+#### Connection Timeout
+
+Connection timeout of Kafka Client
+
+#### Log Level
+
+Log level of Kafka Cient
+
+#### Authentication
+
+#### TLS
+
+Check if tls security is required for Kafka Cluster
+
+#### CA Certs (Optional)
+
+CA Root certificate path defined in Kafka Cluster
+
+#### Client Cert (Optional)
+
+Client cert path created by openssl derived from Private Key (pem)
+
+#### Private Key (Optional)
+
+Private Key path created by openssl (pem)
+
+#### Passphare (Optional)
+
+Passphrase of created private Key
+
+#### Self Sign
+
+Check if want to be allowed untrusted certificates
+
+#### SASL/PLAIN
+
+Check if sasl auth is required for Kafka Cluster
+
+#### Username
+
+Username in order to connect to Kafka Cluster
+
+#### Password
+
+Password in order to connect to Kafka Cluster
+
+#### Use SSL
+
+Activate SSL Connection
+
+#### Advanced Retry Options
+
+Advanced Retry Options of Kafka Client
+
+### kafkajs-producer
+
+#### Name (Optional)
+
+Name wanted to be shown on your node
+
+#### Client
+
+Client which is wanted to be connect
+
+#### Topic
+
+Topic name of selected broker which is wanted to be consume
+
+#### Advanced Options
+
+Advanced options of Producer
+
+Some parameters can be send over kafka pipe.
+
+Notice: Parameters in Producer Node have to be null
+
+msg.key
+msg.topic
+msg.partition
+msg.headers
+
+### kafkajs-consumer
+
+#### Name (Optional)
+
+Name wanted to be shown on your node
+
+#### Client
+
+Client which is wanted to be connect
+
+#### Group ID
+
+Group ID of consumer. If it is null, custom uuid will be generated for every connection
+
+#### Topic
+
+Topic name of selected broker which is wanted to be consume
+
+#### Advanced Options
+
+Advanced options of Consumer
+
+## Installation
+
+```code
+npm install node-red-contrib-kafkajs
+```
+
+## Screenshots
+
+![kafkajs-client](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-client.PNG)
+
+![kafkajs-consumer](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-consumer.PNG)
+
+![kafkajs-producer](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-producer.PNG)

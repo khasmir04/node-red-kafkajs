@@ -1,0 +1,29 @@
+{
+  "name": "@khasmir/node-red-kafkajs",
+  "version": "0.0.1",
+  "license": "Apache 2.0",
+  "description": "A kafkajs custom nodes for Node-RED",
+  "author": {
+    "name": "Khasmir Jhon Caluscusao",
+    "email": "kcaluscusao@gmail.com"
+  },
+  "scripts": {},
+  "node-red": {
+    "nodes": {
+      "kafka-consumer": "./src/kafka-consumer.js",
+      "kafka-producer": "./src/kafka-producer.js",
+      "kafka-broker": "./src/kafka-client.js"
+    }
+  },
+  "dependencies": {
+    "kafkajs": "latest",
+    "kafkajs-snappy": "latest",
+    "uuid": "latest"
+  },
+  "devDependencies": {},
+  "keywords": [
+    "node-red",
+    "kafka",
+    "kafka-js"
+  ]
+}
