@@ -16,7 +16,7 @@ module.exports = function (RED) {
         const kafka = new Kafka(client.options);
 
         let consumerOptions = new Object();
-        consumerOptions.groupId = config.groupid ? config.groupid : 'kj_kafka_' + uuidv4();
+        consumerOptions.groupId = config.groupid ? config.groupid : 'kj-kafka-' + uuidv4();
 
         if (config.useSnappyCompression) {
           CompressionCodecs[CompressionTypes.Snappy] = SnappyCodec;
