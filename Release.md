@@ -1,4 +1,4 @@
-# KafkaJS Release notes
+# KafkaKJ Release notes
 
 > Khasmir Jhon Caluscusao
 
@@ -23,3 +23,12 @@
 ## 1.3.0
 
 - Added option to enable/disable output ports
+
+## 1.3.1
+
+- Fixed consumer and produce advanced options
+- Add note to unimplemented producer options
+
+## 1.3.2
+
+- Add note under Group ID property

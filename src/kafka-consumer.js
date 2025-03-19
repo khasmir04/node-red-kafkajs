@@ -16,7 +16,7 @@ module.exports = function (RED) {
         const kafka = new Kafka(client.options);
 
         let consumerOptions = new Object();
-        consumerOptions.groupId = config.groupid ? config.groupid : 'kj-kafka-' + uuidv4();
+        consumerOptions.groupId = config.groupid ? config.groupid : 'kj_kafka_' + uuidv4();
 
         if (config.useSnappyCompression) {
           CompressionCodecs[CompressionTypes.Snappy] = SnappyCodec;
@@ -28,20 +28,20 @@ module.exports = function (RED) {
         let runOptions = new Object();
 
         if (config.advancedoptions) {
-            consumerOptions.sessionTimeout = config.sessiontimeout;
-            consumerOptions.rebalanceTimeout = config.rebalancetimeout;
-            consumerOptions.heartbeatInterval = config.heartbeatinterval;
-            consumerOptions.metadataMaxAge = config.metadatamaxage;
+            consumerOptions.sessionTimeout = parseInt(config.sessiontimeout);
+            consumerOptions.rebalanceTimeout = parseInt(config.rebalancetimeout);
+            consumerOptions.heartbeatInterval = parseInt(config.heartbeatinterval);
+            consumerOptions.metadataMaxAge = parseInt(config.metadatamaxage);
+            consumerOptions.maxBytesPerPartition = parseInt(config.maxbytesperpartition);
+            consumerOptions.minBytes = parseInt(config.minbytes);
+            consumerOptions.maxBytes = parseInt(config.maxbytes);
+            consumerOptions.maxWaitTimeInMs = parseInt(config.maxwaittimeinms);
             consumerOptions.allowAutoTopicCreation = config.allowautotopiccreation;
-            consumerOptions.maxBytesPerPartition = config.maxbytesperpartition;
-            consumerOptions.minBytes = config.minbytes;
-            consumerOptions.maxBytes = config.maxbytes;
-            consumerOptions.maxWaitTimeInMs = config.maxwaittimeinms;
 
             subscribeOptions.fromBeginning = config.frombeginning;
 
-            runOptions.autoCommitInterval = config.autocommitinterval;
-            runOptions.autoCommitThreshold = config.autocommitthreshold;
+            runOptions.autoCommitInterval = parseInt(config.autocommitinterval);
+            runOptions.autoCommitThreshold = parseInt(config.autocommitthreshold);
         }
 
         node.init = async function init() {

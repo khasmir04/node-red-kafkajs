@@ -26,20 +26,21 @@ module.exports = function (RED) {
         var sendOptions = new Object();
         sendOptions.topic = config.topic || null;
 
-        producerOptions.metadataMaxAge = config.metadatamaxage;
+        producerOptions.metadataMaxAge = parseInt(config.metadatamaxage);
         producerOptions.allowAutoTopicCreation = config.allowautotopiccreation;
-        producerOptions.transactionTimeout = config.transactiontimeout;
+        producerOptions.transactionTimeout = parseInt(config.transactiontimeout);
 
         sendOptions.partition = config.partition || null;
         sendOptions.key = config.key || null;
         sendOptions.headers = config.headeritems || {};
 
         sendOptions.acks = acksDict[config.acknowledge];
-        sendOptions.timeout = config.responsetimeout;
+        sendOptions.timeout = parseInt(config.responsetimeout);
 
         node.sendOptions = sendOptions;
 
         node.init = async function init() {
+            // TODO: Add producer options in the argument
             const producer = kafka.producer();
             node.producer = producer;
 
