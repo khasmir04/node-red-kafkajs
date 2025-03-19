@@ -30,7 +30,7 @@ module.exports = function (RED) {
         producerOptions.allowAutoTopicCreation = config.allowautotopiccreation;
         producerOptions.transactionTimeout = parseInt(config.transactiontimeout);
 
-        sendOptions.partition = config.partition || null;
+        sendOptions.partition = parseInt(config.partition) || null;
         sendOptions.key = config.key || null;
         sendOptions.headers = config.headeritems || {};
 
