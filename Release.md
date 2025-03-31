@@ -1,4 +1,4 @@
-# KafkaKJ Release notes
+# Kafka KJ Release notes
 
 > Khasmir Jhon Caluscusao
 
@@ -32,3 +32,38 @@
 ## 1.3.2
 
 - Add note under Group ID property
+
+## 1.4.0
+
+- Allow env var for Connection Timeout, Request Timeout, and Max Retry Time for kafka-client
+- Fixed node.onError and node.error for consumer and producer
+- Added on crash and heartbeat listener,indicator and log for consumer
+
+## 1.5.0
+
+- New! Added manual consumer
+
+## 1.5.1
+
+- Add eslint and prettier
+
+## 1.5.2
+
+- Fix default enabled value of manual consumer
+
+## 1.5.3
+
+- Refactor all nodes
+- Create utility folder for reusable functions
+
+## 1.5.4
+
+- Move imports for better readability
+- Fix set interval callback function
+- Add building script
+
+## 1.5.5
+
+- Reorganize files for better maintainability and extensibility
+- Fixed manual consumer status
+- Replace enabled icon

@@ -1,4 +1,4 @@
-# node-red-kafkajs
+# node-red-kafka-kj
 
 This node can be used in order to produce and consume messages to Kafka. It is highly dependent on 'kafkajs' library. Consists of two nodes.
 
@@ -148,10 +148,10 @@ Advanced options of Consumer
 npm install @khasmir/node-red-kafkajs
 ```
 
-<!-- ## Screenshots
+## Screenshots
 
 ![kafkajs-client](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-client.PNG)
 
 ![kafkajs-consumer](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-consumer.PNG)
 
-![kafkajs-producer](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-producer.PNG) -->
+![kafkajs-producer](https://raw.githubusercontent.com/emrebekar/node-red-contrib-kafkajs/master/images/kafka-producer.PNG)

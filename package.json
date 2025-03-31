@@ -1,13 +1,16 @@
 {
-  "name": "@khasmir/node-red-kafkajs",
-  "version": "0.0.1",
+  "name": "node-red-kafka-kj",
+  "version": "1.5.5",
   "license": "Apache 2.0",
-  "description": "A kafkajs custom nodes for Node-RED",
+  "description": "A kafka js custom node for Node-RED",
   "author": {
     "name": "Khasmir Jhon Caluscusao",
     "email": "kcaluscusao@gmail.com"
   },
-  "scripts": {},
+  "scripts": {
+    "format": "prettier --write 'src/**/*.{js,html}'",
+    "build-pack": "npm install && npm run format && npm pack"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/khasmir04/node-red-kafkajs.git"
@@ -17,9 +20,10 @@
   },
   "node-red": {
     "nodes": {
-      "kafka-consumer": "./src/kafka-consumer.js",
-      "kafka-producer": "./src/kafka-producer.js",
-      "kafka-broker": "./src/kafka-client.js"
+      "kafka-consumer": "./src/consumer/kafka-consumer.js",
+      "kafka-manual-consumer": "./src/consumer/kafka-manual-consumer.js",
+      "kafka-producer": "./src/producer/kafka-producer.js",
+      "kafka-broker": "./src/client/kafka-client.js"
     }
   },
   "dependencies": {
@@ -27,7 +31,12 @@
     "kafkajs-snappy": "latest",
     "uuid": "latest"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@eslint/js": "^9.23.0",
+    "eslint": "^9.23.0",
+    "globals": "^16.0.0",
+    "prettier": "^3.5.3"
+  },
   "keywords": [
     "node-red",
     "kafka",
